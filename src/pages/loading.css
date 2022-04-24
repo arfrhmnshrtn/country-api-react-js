@@ -1,0 +1,35 @@
+.loading-pulse {
+  position: relative;
+  width: 6px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: pulse 750ms infinite;
+  animation-delay: 250ms;
+}
+.loading-pulse:before,
+.loading-pulse:after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 16px;
+  width: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  top: 50%;
+  transform: translateY(-50%);
+  animation: pulse 750ms infinite;
+}
+.loading-pulse:before {
+  left: -12px;
+}
+.loading-pulse:after {
+  left: 12px;
+  animation-delay: 500ms;
+}
+@keyframes pulse {
+  50% {
+    background: black;
+  }
+}
+.wrapper{
+    height: 50vh;
+}
